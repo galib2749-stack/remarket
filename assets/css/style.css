@@ -1,0 +1,362 @@
+/*
+  Re:Market — современный сайт рекламного агентства
+  Эта таблица стилей использует переменные CSS для гибкой настройки
+  цветовой схемы и размеров. Основана на системных шрифтах и шрифте Inter.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #1d4ed8; /* насыщенный синий */
+  --secondary-color: #06b6d4; /* бирюзовый */
+  --accent-color: #f97316; /* оранжевый акцент */
+  --background-color: #f9fafb; /* светлый фон */
+  --text-color: #1e293b; /* тёмно‑синий для текста */
+  --muted-color: #64748b; /* приглушённый серый */
+  --border-radius: 0.5rem;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav a {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.navbar nav a:hover {
+  color: var(--primary-color);
+}
+
+main {
+  padding: 2.5rem 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at top left, var(--secondary-color), var(--primary-color));
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
+  color: #f0f9ff;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #fb923c;
+}
+
+/* Секции */
+.section {
+  margin-top: 4rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Карточки услуг и кейсов */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  flex-grow: 1;
+  color: var(--muted-color);
+  margin-bottom: 1rem;
+}
+
+.card-body .card-link {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.card-body .card-link:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Таблица тарифов */
+.pricing-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0.5rem 0 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: var(--muted-color);
+}
+
+.pricing-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card .plan-cta {
+  margin-top: auto;
+  padding: 0.75rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+}
+
+.pricing-card .plan-cta:hover {
+  background-color: #fb923c;
+}
+
+/* Форма */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
+}
+
+.form-group .error {
+  color: #e11d48;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.messenger {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.messenger button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.messenger button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  border-top: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-color);
+  margin-top: 4rem;
+}
+
+footer a {
+  color: var(--primary-color);
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .navbar nav {
+    gap: 1rem;
+  }
+  .pricing-card {
+    padding: 1.5rem;
+  }
+}
