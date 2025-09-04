@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Re:Market</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">Re:Market</a>
+      <nav>
+        <a href="services.html">Услуги</a>
+        <a href="cases.html">Кейсы</a>
+        <a href="pricing.html">Тарифы</a>
+        <a href="about.html">О нас</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1 class="section-title">Свяжитесь с нами</h1>
+    <p style="text-align:center; max-width:720px; margin:0 auto 2rem;">Заполните форму, и наш менеджер свяжется с вами в ближайшее время для обсуждения проекта. Вы также можете написать нам в мессенджерах.</p>
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Телефон</label>
+        <input type="text" id="phone" name="phone" placeholder="+7 (___) ___‑__‑__">
+      </div>
+      <div class="form-group">
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" placeholder="Расскажите о вашем проекте и целях"></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="button">Отправить</button>
+        <div class="messenger">
+          <button type="button" data-goal="messenger_click" data-type="telegram" onclick="window.open('https://t.me/username', '_blank')">
+            <!-- Telegram icon (simple svg) -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.99995 15.0001L9.99995 15.0001L9.98845 14.9926L9.99995 15.0001ZM9.99995 15.0001L14.9999 12L14.9999 12L14.9899 11.9915L14.9999 12ZM9.99995 15.0001L11.9999 12.0001L9.99995 15.0001ZM2.00012 12.0001C2.00012 6.47768 6.47771 2.00009 12.0001 2.00009C17.5225 2.00009 22.0001 6.47768 22.0001 12.0001C22.0001 17.5225 17.5225 22.0001 12.0001 22.0001C6.47771 22.0001 2.00012 17.5225 2.00012 12.0001Z" stroke="white" stroke-width="2"/>
+            </svg>
+            Telegram
+          </button>
+          <button type="button" data-goal="messenger_click" data-type="whatsapp" onclick="window.open('https://wa.me/123456789', '_blank')">
+            <!-- WhatsApp icon (simple svg) -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.00012 12.0001C2.00012 6.47771 6.47771 2.00012 12.0001 2.00012C17.5225 2.00012 22.0001 6.47771 22.0001 12.0001C22.0001 17.5225 17.5225 22.0001 12.0001 22.0001C10.167 22.0001 8.4078 21.4638 6.9421 20.5417L2.00012 22.0001L3.45846 17.0581C2.53638 15.5924 2.00012 13.8332 2.00012 12.0001Z" stroke="white" stroke-width="2"/>
+            </svg>
+            WhatsApp
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <div class="container">
+      © 2025 Re:Market. Все права защищены.
+      <br>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
